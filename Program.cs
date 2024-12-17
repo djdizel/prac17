@@ -11,20 +11,18 @@ namespace prac17
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>() {20,15,13,145,15,113,14,15,16,16,113,
-                12,56,67,13,24,45,243,35,89};
-            Random rng = new Random();
-            int index = rng.Next(0,19);
-            list.Remove(index);
-            Console.WriteLine($"Удален {index} элемент списка");
-            Output(list);
-            Console.ReadKey();
+            List<int> list = new List<int>();
+            Output(list,10);
+            Console.ReadLine();
         }
-        static void Output(List<int> list)
+        static void Output(List<int> list, int size )
         {
-            foreach (int item in list)
+            Random rnd = new Random();
+            for (int i = 0; i < size; i++) 
+            
             {
-                Console.WriteLine(item);
+                list.Add(rnd.Next(1, 20));
+                Console.WriteLine(list[i]);
             }
         }
     }
