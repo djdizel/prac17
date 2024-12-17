@@ -11,11 +11,11 @@ namespace prac17
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>() {20,15,13,145,15,113,14,15,16,16,113,
-                12,56,67,13,24,45,243,35,89};
+            List<int> list = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15, 16,17,18,19 };
             Random rng = new Random();
             int index = rng.Next(0,19);
-            list.Remove(index);
+            list.RemoveAt(index);
             Console.WriteLine($"Удален {index} элемент списка");
             Output(list);
             Console.ReadKey();
